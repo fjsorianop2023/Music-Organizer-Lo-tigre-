@@ -28,4 +28,10 @@ def scan_music_folder(folder_path):
 def save_playlists(playlists):
 with open(PLAYLIST_FILE, "w") as file:
         json.dump(playlists, file, indent=4)
+
+def load_playlists():
+    if os.path.exists(PLAYLIST_FILE):
+        with open(PLAYLIST_FILE, "r") as file:
+            return json.load(file)
+    return {}
     
