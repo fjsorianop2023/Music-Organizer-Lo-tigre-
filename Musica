@@ -35,3 +35,26 @@ def load_playlists():
             return json.load(file)
     return {}
     
+
+def play_song(file_path):
+    pygame.mixer.music.load(file_path)
+    pygame.mixer.music.play()
+    print(f"Now playing: {os.path.basename(file_path)}")
+    playback_controls()
+
+def playback_controls():
+    """Controls playback: pause, resume, and stop."""
+    while True:
+        command = input("Enter command (pause/resume/stop): ").strip().lower()
+        if command == "pause":
+            pygame.mixer.music.pause()
+            print("Music paused. Type 'resume' to continue.")
+        elif command == "resume":
+            pygame.mixer.music.unpause()
+            print("Resuming...")
+        elif command == "stop":
+            pygame.mixer.music.stop()
+            print("Playback stopped.")
+            return
+        else:
+            print("Invalid command. Use pause, resume, or stop.")
