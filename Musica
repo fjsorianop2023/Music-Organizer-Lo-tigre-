@@ -4,3 +4,24 @@ import pygame
 from mutagen.mp3 import MP3
 
 pygame.mixer.init()
+
+PLAYLIST_FILE = "playlists.json"
+
+def scan_music_folder(folder_path):
+    """Scans the specified folder for music files and retrieves metadata."""
+    if not os.path.exists(folder_path):
+        print("Folder not found!")
+        return []
+    
+    music_files = []
+    for file in os.listdir(folder_path):
+        if file.endswith(('.mp3', '.wav')):
+            try:
+                audio = MP3(os.path.join(folder_path, file))
+                duration = int(audio.info.length)
+                music_files.append((file, duration))
+            except Exception:
+                music_files.append((file, "Unknown"))
+    
+    return music_files
+    
