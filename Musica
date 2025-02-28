@@ -26,4 +26,6 @@ def scan_music_folder(folder_path):
     return music_files
 
 def save_playlists(playlists):
+with open(PLAYLIST_FILE, "w") as file:
+        json.dump(playlists, file, indent=4)
     
