@@ -1,1 +1,6 @@
+Hemos tenido que implementar pygame y mutagen en el codigo, pygame para poder reproducir la musica 
+y mutagen para poder abrir el archivo de música que se encuentre en su respectivo folder y para que escanee el tiempo que dura la canción en segundos.
 
+Estos links los usamos para saber los comandos que usar para agregarlo en el codigo.
+https://www.pygame.org/docs/ref/music.html 
+https://mutagen.readthedocs.io/en/latest/
