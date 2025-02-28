@@ -25,5 +25,5 @@ def scan_music_folder(folder_path):
     
     return music_files
 
-def save_playlists(playlists)
+def save_playlists(playlists):
     
