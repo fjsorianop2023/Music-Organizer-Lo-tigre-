@@ -24,4 +24,6 @@ def scan_music_folder(folder_path):
                 music_files.append((file, "Unknown"))
     
     return music_files
+
+def save_playlists(playlists)
     
