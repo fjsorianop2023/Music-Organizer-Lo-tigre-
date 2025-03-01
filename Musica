@@ -100,6 +100,7 @@ def manage_playlists(playlists, music_files):
                 print("Playlist not found!")
                 continue
 
+            while True: 
 
 
         
