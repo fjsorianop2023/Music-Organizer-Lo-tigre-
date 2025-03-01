@@ -106,8 +106,10 @@ def manage_playlists(playlists, music_files):
                 print("Options: 1. Add Song 2. Remove Song 3. Reposition Song 4. Back")
                 edit_choice = input("Enter choice: ").strip()
 
-llego el drichyyyy
-
+                if edit_choice == "1":
+                    print("\nAvailable Songs:")
+                    for idx, (file, _) in enumerate(music_files, start=1):
+                        print(f"{idx}. {file}")
 
         
        
