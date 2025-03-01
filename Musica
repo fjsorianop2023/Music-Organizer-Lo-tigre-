@@ -77,3 +77,7 @@ def play_playlist(playlist_name, playlists, folder_path):
             continue
         play_song(file_path)
 
+def manage_playlists(playlists, music_files):
+    """Manages playlists by allowing users to create, edit, and delete them."""
+    while True:
+
