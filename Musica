@@ -106,6 +106,7 @@ def manage_playlists(playlists, music_files):
                 print("Options: 1. Add Song 2. Remove Song 3. Reposition Song 4. Back")
                 edit_choice = input("Enter choice: ").strip()
 
+llego el drichyyyy
 
 
         
