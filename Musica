@@ -100,7 +100,12 @@ def manage_playlists(playlists, music_files):
                 print("Playlist not found!")
                 continue
 
-            while True: 
+           while True:
+                print(f"\nEditing Playlist: {name}")
+                print(f"Current songs in {name}: {', '.join(playlists[name]) if playlists[name] else 'No songs in this playlist.'}")
+                print("Options: 1. Add Song 2. Remove Song 3. Reposition Song 4. Back")
+                edit_choice = input("Enter choice: ").strip()
+
 
 
         
