@@ -96,6 +96,9 @@ def manage_playlists(playlists, music_files):
         
         elif choice == "2":
             name = input("Enter playlist name to edit: ").strip()
+            if name not in playlists:
+                print("Playlist not found!")
+                continue
 
 
 
