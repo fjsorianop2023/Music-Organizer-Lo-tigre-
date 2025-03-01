@@ -4,3 +4,6 @@ y mutagen para poder abrir el archivo de música que se encuentre en su respecti
 Estos links los usamos para saber los comandos que usar para agregarlo en el codigo.
 https://www.pygame.org/docs/ref/music.html 
 https://mutagen.readthedocs.io/en/latest/
+I made this question to chat gpt because i kept adding to the code but the commit wasn't being direct to the repository Fernando created, it was creating a fork.
+How can I edit in the same repository of an user without creating a fork in GitHub?
+By the response of Chatgpt Fernando added me as a direct collaborator and I started doing the commits directly.
