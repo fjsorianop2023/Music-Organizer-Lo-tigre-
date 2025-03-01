@@ -58,3 +58,22 @@ def playback_controls():
             return
         else:
             print("Invalid command. Use pause, resume, or stop.")
+
+def play_playlist(playlist_name, playlists, folder_path):
+    """Plays the songs in a selected playlist sequentially."""
+    if playlist_name not in playlists:
+        print("Playlist not found!")
+        return
+    
+    playlist = playlists[playlist_name]
+    if not playlist:
+        print("Playlist is empty!")
+        return
+    
+    for song in playlist:
+        file_path = os.path.join(folder_path, song)
+        if not os.path.exists(file_path):
+            print(f"File not found: {song}")
+            continue
+        play_song(file_path)
+
