@@ -85,3 +85,11 @@ def manage_playlists(playlists, music_files):
             print(f"{idx}. {name}")
         print("Options: 1. Create 2. Edit 3. Delete 4. View Songs 5. Back")
         choice = input("Enter choice: ").strip()
+        
+        if choice == "1":
+            name = input("Enter playlist name: ").strip()
+            if name in playlists:
+                print("Playlist already exists!")
+            else:
+                playlists[name] = []
+                print("Playlist created.")
