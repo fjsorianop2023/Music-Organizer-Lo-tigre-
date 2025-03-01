@@ -93,3 +93,5 @@ def manage_playlists(playlists, music_files):
             else:
                 playlists[name] = []
                 print("Playlist created.")
+        
+        elif choice == "2":
