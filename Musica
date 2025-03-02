@@ -173,5 +173,8 @@ def view_playlist(playlists):
     if not playlists:
         print("No playlists available.")
         return
+    print("\nAvailable Playlists:")
+    for idx, name in enumerate(playlists.keys(), start=1):
+        print(f"{idx}. {name}")
         
        
