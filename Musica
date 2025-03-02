@@ -130,6 +130,12 @@ def manage_playlists(playlists, music_files):
                             print(f"{song_to_remove} is not in the playlist.")
                     else:
                         print("The playlist is empty. No songs to remove.")
-
+                elif edit_choice == "3":
+                    if len(playlists[name]) > 1:
+                        print(f"Current order: {', '.join(playlists[name])}")
+                        song_to_move = input("Enter song name to reposition: ").strip()
+                        if song_to_move in playlists[name]:
+                            new_position = input(f"Enter the new position (1 to {len(playlists[name])}): ").strip()
+                            if new_position.isdigit() and 1 <= int(new_position) <= len(playlists[name]):
         
        
