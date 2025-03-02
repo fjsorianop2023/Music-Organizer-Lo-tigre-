@@ -151,5 +151,21 @@ def manage_playlists(playlists, music_files):
                     break
                 else:
                     print("Invalid choice. Please choose again.")
+        elif choice == "3":
+            name = input("Enter playlist name to delete: ").strip()
+            if name in playlists:
+                del playlists[name]
+                print("Playlist deleted!")
+            else:
+                print("Playlist not found!")
+        
+        elif choice == "4":
+            view_playlist(playlists)
+        
+        elif choice == "5":
+            save_playlists(playlists)
+            break
+
+\
         
        
