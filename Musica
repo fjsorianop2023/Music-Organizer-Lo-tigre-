@@ -176,5 +176,6 @@ def view_playlist(playlists):
     print("\nAvailable Playlists:")
     for idx, name in enumerate(playlists.keys(), start=1):
         print(f"{idx}. {name}")
-        
+
+    playlist_choice = input("Enter playlist number to view: ").strip()
        
