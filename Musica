@@ -169,6 +169,9 @@ def manage_playlists(playlists, music_files):
 \
 
 def view_playlist(playlists):
-    if not
+    """Displays the songs in a selected playlist."""
+    if not playlists:
+        print("No playlists available.")
+        return
         
        
