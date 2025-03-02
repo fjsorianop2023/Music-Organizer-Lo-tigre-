@@ -137,5 +137,19 @@ def manage_playlists(playlists, music_files):
                         if song_to_move in playlists[name]:
                             new_position = input(f"Enter the new position (1 to {len(playlists[name])}): ").strip()
                             if new_position.isdigit() and 1 <= int(new_position) <= len(playlists[name]):
+                                    playlists[name].remove(song_to_move)
+                                    playlists[name].insert(int(new_position) - 1, song_to_move)
+                                    print(f"{song_to_move} moved to position {new_position}.")
+                            else:
+                                print("Invalid position.")
+                        else:
+                            print(f"{song_to_move} is not in the playlist.")
+                    else:
+                        print("There are not enough songs to reorder.")
+                
+                elif edit_choice == "4":
+                    break
+                else:
+                    print("Invalid choice. Please choose again.")
         
        
