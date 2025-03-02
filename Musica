@@ -110,6 +110,26 @@ def manage_playlists(playlists, music_files):
                     print("\nAvailable Songs:")
                     for idx, (file, _) in enumerate(music_files, start=1):
                         print(f"{idx}. {file}")
+                    song_choice = input("Enter song number to add: ").strip()
+                    if song_choice.isdigit() and 1 <= int(song_choice) <= len(music_files):
+                        song_name = music_files[int(song_choice) - 1][0]
+                        if song_name not in playlists[name]:
+                            playlists[name].append(song_name)
+                            print(f"{song_name} added to playlist.")
+                        else:
+                            print(f"{song_name} is already in the playlist.")
+                    else:
+                        print("Invalid choice.")
+                elif edit_choice == "2":
+                    if playlists[name]:
+                        song_to_remove = input(f"Enter song name to remove from {name}: ").strip()
+                        if song_to_remove in playlists[name]:
+                            playlists[name].remove(song_to_remove)
+                            print(f"{song_to_remove} removed from playlist.")
+                        else:
+                            print(f"{song_to_remove} is not in the playlist.")
+                    else:
+                        print("The playlist is empty. No songs to remove.")
 
         
        
