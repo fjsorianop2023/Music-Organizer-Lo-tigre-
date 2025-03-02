@@ -167,5 +167,7 @@ def manage_playlists(playlists, music_files):
             break
 
 \
+
+def view_playlist(playlists):
         
        
