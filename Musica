@@ -187,6 +187,9 @@ def view_playlist(playlists):
         print("Invalid choice!")
 def main():
     print("Welcome to the Music Player!")
+    folder_path = input("Enter the music folder path: ").strip()
+    music_files = scan_music_folder(folder_path)
+
    
     
        
