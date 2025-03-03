@@ -26,7 +26,7 @@ def scan_music_folder(folder_path):
     return music_files
 
 def save_playlists(playlists):
-with open(PLAYLIST_FILE, "w") as file:
+    with open(PLAYLIST_FILE, "w") as file:
         json.dump(playlists, file, indent=4)
 
 def load_playlists():
@@ -86,7 +86,7 @@ def manage_playlists(playlists, music_files):
         print("Options: 1. Create 2. Edit 3. Delete 4. View Songs 5. Back")
         choice = input("Enter choice: ").strip()
         
-       if choice == "1":
+        if choice == "1":
             name = input("Enter playlist name: ").strip()
             if name in playlists:
                 print("Playlist already exists!")
@@ -100,7 +100,7 @@ def manage_playlists(playlists, music_files):
                 print("Playlist not found!")
                 continue
 
-           while True:
+            while True:
                 print(f"\nEditing Playlist: {name}")
                 print(f"Current songs in {name}: {', '.join(playlists[name]) if playlists[name] else 'No songs in this playlist.'}")
                 print("Options: 1. Add Song 2. Remove Song 3. Reposition Song 4. Back")
@@ -130,6 +130,7 @@ def manage_playlists(playlists, music_files):
                             print(f"{song_to_remove} is not in the playlist.")
                     else:
                         print("The playlist is empty. No songs to remove.")
+                
                 elif edit_choice == "3":
                     if len(playlists[name]) > 1:
                         print(f"Current order: {', '.join(playlists[name])}")
@@ -189,6 +190,12 @@ def main():
     print("Welcome to the Music Player!")
     folder_path = input("Enter the music folder path: ").strip()
     music_files = scan_music_folder(folder_path)
+
+    if not music_files:
+        print("No music files found!")
+        return
+    
+    playlists = load_playlists()
 
    
     
