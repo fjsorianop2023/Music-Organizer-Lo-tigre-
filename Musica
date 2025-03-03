@@ -183,6 +183,8 @@ def view_playlist(playlists):
         print(f"\nSongs in {playlist_name}:")
         for idx, song in enumerate(playlists[playlist_name], start=1):
             print(f"{idx}. {song}")
+    else:
+        print("Invalid choice!")
    
     
        
