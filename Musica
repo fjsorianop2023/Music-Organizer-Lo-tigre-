@@ -185,6 +185,8 @@ def view_playlist(playlists):
             print(f"{idx}. {song}")
     else:
         print("Invalid choice!")
+def main():
+    print("Welcome to the Musc Player!")
    
     
        
