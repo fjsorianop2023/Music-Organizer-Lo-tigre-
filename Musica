@@ -196,6 +196,35 @@ def main():
         return
     
     playlists = load_playlists()
+    playlists = load_playlists()
+    
+    while True:
+        print("\nOptions:")
+        print("1. View Music Files")
+        print("2. Manage Playlists")
+        print("3. View Playlist Songs")
+        print("4. Play a Playlist")
+        print("5. Exit")
+        
+        choice = input("Enter your choice: ").strip()
+        
+        if choice == "1":
+            print("\nAvailable Music Files:")
+            for idx, (file, duration) in enumerate(music_files, start=1):
+                print(f"{idx}. {file} ({duration}s)")
+        elif choice == "2":
+            manage_playlists(playlists, music_files)
+        elif choice == "3":
+            view_playlist(playlists)
+        elif choice == "4":
+            playlist_name = input("Enter the playlist name to play: ").strip()
+            play_playlist(playlist_name, playlists, folder_path)
+        elif choice == "5":
+            save_playlists(playlists)
+            print("Goodbye!")
+            break
+
+main()
 
    
     
