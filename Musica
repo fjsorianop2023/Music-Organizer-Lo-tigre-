@@ -178,4 +178,11 @@ def view_playlist(playlists):
         print(f"{idx}. {name}")
 
     playlist_choice = input("Enter playlist number to view: ").strip()
+    if playlist_choice.isdigit() and 1 <= int(playlist_choice) <= len(playlists):
+        playlist_name = list(playlists.keys())[int(playlist_choice) - 1]
+        print(f"\nSongs in {playlist_name}:")
+        for idx, song in enumerate(playlists[playlist_name], start=1):
+            print(f"{idx}. {song}")
+   
+    
        
