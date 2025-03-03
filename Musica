@@ -186,7 +186,7 @@ def view_playlist(playlists):
     else:
         print("Invalid choice!")
 def main():
-    print("Welcome to the Musc Player!")
+    print("Welcome to the Music Player!")
    
     
        
